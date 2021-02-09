@@ -66,6 +66,7 @@ alias week='date +%V'
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
+alias reload_dotfiles="rcup && reload"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then

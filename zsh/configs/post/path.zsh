@@ -11,6 +11,14 @@ elif which brew >/dev/null &&
 fi
 
 # mkdir .git/safe in the root of repositories you trust
-PATH=".git/safe/../../bin:$PATH"
+PATH=".git/safe/../../bin:$PATH";
+
+# Add `~/bin` to the path
+PATH="$HOME/bin:$PATH";
+
+PATH="$HOME/.local/bin:$PATH"
+
+# Add node_modules to the `$PATH`
+PATH="./node_modules/.bin/:$PATH";
 
 export -U PATH

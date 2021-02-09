@@ -34,8 +34,22 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+# Path to your oh-my-zsh installation.
+export ZSH="/home/$USER/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="spaceship"
+
+plugins=(autojump git copyfile colorize history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+[[ -f ~/.zsh_profile ]] && source ~/.zsh_profile
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
